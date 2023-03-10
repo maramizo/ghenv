@@ -1,5 +1,5 @@
 
-### <center>Copy your .env into GitHub Secrets within seconds</center>
+### Copy your .env into GitHub Secrets within seconds
 
 # GitHub Env (GHENV)
 Very simple and straightforward CLI tool that allows you to set the environment variables for your GitHub Actions workflows.
