@@ -3,6 +3,7 @@ setup(
     name='ghenv',
     version='1.0.0',
     packages=find_packages(),
+    long_description_content_type="text/markdown",
     py_modules=['cli', 'main'],
     python_requires=">=3.10.0",
     classifiers=[
