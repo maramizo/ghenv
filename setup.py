@@ -28,5 +28,5 @@ setup(
         'console_scripts': [
             'ghenv=cli:main'
         ]
-    }
+    },
 )
