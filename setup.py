@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 setup(
     name='ghenv',
-    version='1.0.0',
+    version='{{version_placeholder}}',
     packages=find_packages(),
     description='A CLI tool to manage GitHub environments.',
     long_description=open('README.md').read(),
