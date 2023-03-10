@@ -29,11 +29,12 @@ def read_env_file() -> dict[str, str]:
     return values
 
 
-def upload_secret(repo: Repository, secret_name: str, secret_value: str):
+def upload_secret(repo: Repository, secret_name: str, secret_value: str, debug_print=True):
     repo.create_secret(secret_name, secret_value)
+    debug_print and print(f"✅ - {secret_name}")
 
 
-def main(exit_on_failure=True) -> bool:
+def main(exit_on_failure=True, debug_print=True) -> bool:
     if not os.path.exists(".env"):
         print("No '.env' file found at current directory. Exiting...")
         exit_on_failure and exit(1)
@@ -52,7 +53,7 @@ def main(exit_on_failure=True) -> bool:
         return False
 
     for key, val in env_values.items():
-        upload_secret(repo, key, val)
+        upload_secret(repo, key, val, debug_print)
 
     print(f"Created {len(env_values)} keys.")
     return True
